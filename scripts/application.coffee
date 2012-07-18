@@ -149,6 +149,7 @@ class App
     @expression   = new Expression(el: '#expression')
     @test_strings = new TestStrings(el: '#test_strings')
     @results      = new Results(@expression, @test_strings)
+    $('input[name=expression]').focus()
     $('#example').bind 'click', @loadExample
     @loadFromHash() if window.location.hash != ''
 
